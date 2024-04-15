@@ -1,0 +1,28 @@
+Assignment 2: 
+Flowchart Creation - 
+Design a flowchart that outlines the logic for a user login process. It should include conditional paths for successful and unsuccessful login attempts, and a loop that allows a user three attempts before
+locking the account
+
+Flowchart Creation
+
+ User Login Process
+
+
+Start
+
+Initialize attempts = 0
+
+Repeat until attempts < 3
+    Prompt user to input username and password
+    Read and store the input as 'username' and 'password'
+    
+    If username and password are correct
+        Display "Login Successful"
+        Exit loop
+    
+    Else
+        Display "Invalid username or password"
+        Increment attempts by 1
+
+Display "Account Locked"
+End

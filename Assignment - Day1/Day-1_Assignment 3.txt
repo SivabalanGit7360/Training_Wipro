@@ -1,0 +1,68 @@
+Assignment 3: 
+
+Function Design and Modularization - 
+Create a document that describes the design of two modular functions:
+one that returns the factorial of a number, and another that calculates the nth Fibonacci number. 
+Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+
+1.Function to Factorial:
+
+Pseudocode:::
+
+Function factorial(num)
+     fact = 1
+    for i from 1 to num DO
+         fact= fact * i
+    END
+    return fact
+End Function
+
+
+2.Function toCalculate Fibonacci Number
+
+
+This function calculates the nth Fibonacci number.
+
+Pseudocode:::
+
+Function fibonacci(n)
+    if n = 0 THEN
+        return 0
+    ELSE IF n = 1 THEN
+        return 1
+    ELSE
+        Initialize variables a and b to 0 and 1 respectively
+        FOR i from 2 to n DO
+        temp = a + b
+        a = b
+        b = temp
+        ENDFOR
+        return b
+    END IF
+End Function
+
+
+Explanation of Modularity in Programming :
+
+Modularity in programming involves breaking down a program into smaller, self-contained units (functions or modules) that perform specific tasks. This approach offers several benefits:
+
+1. Code Reusability:
+	 Modular functions can be reused in multiple parts of a program or in different programs altogether, saving development time and effort.
+
+2. Ease of Maintenance: 
+	Since each module focuses on a specific task, it's easier to debug, update, or replace a particular module without affecting the rest of the program.
+
+3. Enhanced Readability: 
+	Modular design makes code more readable and understandable by organizing it into logical units, making it easier for developers to comprehend and maintain.
+
+4. Scalability: 
+	Modularity allows for easy scalability of a program by adding or removing modules as needed, without affecting the overall structure of the program.
+
+
+
+
+
+
+
+
