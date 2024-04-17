@@ -1,0 +1,140 @@
+Task 1: Data Types/Variables
+Write a program that declares two integer variables, swaps their values without using a third variable, and prints the result.
+
+ANSWER :
+
+public class SwapVariables {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		swapTwoVariables(a,b);
+	}
+	static void swapTwoVariables(int a, int b) {
+		a = a+b;
+		b = a-b;
+		a = a-b;
+		System.out.println(a+","+b);
+	}
+}
+
+Task 2: Operators
+Create a program that simulates a simple calculator using command-line arguments 
+to perform and print the result of addition, subtraction, multiplication, and division..
+
+ANSWER :
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Select the action : \n"+
+						"1. Addition  \n"+
+				        "2. Subtration \n" +
+						"3. Division \n" +
+				        "4. Multiplication \n");
+		int n = sc.nextInt();
+		switch(n) {
+		case 1: 
+			int addition = a+b;
+			System.out.println(addition);
+			break;
+		case 2: 
+			int subraction = a-b;
+			System.out.println(subraction);
+			break;
+		case 3: 
+			int multiplication = a*b;
+			System.out.println(multiplication);
+			break;
+		case 4: 
+			int division = a/b;
+			System.out.println(division);
+			break;
+		
+		default :
+			System.out.println("Your choice was wrong. Please choose correct options :::");
+		}
+
+	}
+
+}
+
+Task 3 :
+
+Write a Java program that reads an integer and prints whether it is a prime number using a for loop and if statements.
+
+
+public class PrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
+
+        boolean isPrime = true;
+
+       
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+
+       
+    }
+}
+
+Task 4:
+
+Create a program that declares an array of integers, initializes it with consecutive numbers, and prints the array in reverse order.
+
+public class ReverseArray {
+    public static void main(String[] args) {
+       
+        int[] numArray = new int[20];
+        
+       
+        for (int i = 0; i < numArray.length; i++) {
+            numArray[i] = i + 1;
+        }
+
+       
+        System.out.println("Original array:");
+        printArray(numArray);
+
+       
+        System.out.println("\n Array in reverse order:");
+        printReverseArray(numArray);
+    }
+
+  
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    
+    public static void printReverseArray(int[] arr) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
